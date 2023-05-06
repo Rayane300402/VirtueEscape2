@@ -1,0 +1,159 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Marrakech</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssmarakech.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+   
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+        <div id="slider">
+
+
+          <div class="slide slide1">
+            <div class="slide-content">
+             <h1>Bahia Palace,</h1>
+             <p>
+               This 150-room palace was home to slave-turned-vizier Abu ‘Bou’ Ahmed, who spared no expense in its gorgeous decoration.<br>
+                The painted, gilded ceilings, polychrome zellige tiling and carved stucco still have the intended effect – which is just ‘wow’.<br>
+                Bahia is roughly translated as ‘beautiful’ and that’s definitely not an overstatement. <br>
+                Escape from the heat of the midday sun to the palace’s shaded spaces and get lost in all the intricate detailing.
+             </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293734-d610173-Reviews-Palacio_da_Bahia-Marrakech_Marrakech_Safi.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+              <h1>Souk Semmarine,</h1>
+              <p>
+                Marrakech is famous for its souks (markets) and Souk Semmarine is the biggest of them all.<br>
+                 Rugs, leather goods, silverware and crockery of all shapes and sizes are on offer in this labyrinth – just try not to get lost.<br>
+
+                Why go? If you’re looking for a true Marrakchi experience, get stuck in and do some haggling with one of the local traders.<br>
+                 Knock them down from their opening price and come away with a one-of-a-kind memento.
+                 </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293734-d19317143-Reviews-Souk_Semmarine-Marrakech_Marrakech_Safi.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Souk Place des Épices,</h1>
+              <p>
+                What is it? Moroccan cuisine is famous for its rich, aromatic flavours. <br>
+                Place des Épices is the traditional spice souk where you’ll find merchants selling everything from allspice to ras al hanout (a mix of more than a dozen spices).<br>
+                Why go? This open-air souk is truly atmospheric. As well as bags of spices,<br>
+                you can pick up colourful basketry or simply watch the show from one of the cafés that ring the square.
+                </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293734-d10758341-Reviews-Place_Des_Epices-Marrakech_Marrakech_Safi.html">READ MORE</a></span>
+
+            </div>
+          </div>
+
+          
+          <div class="slide slide4">
+            <div class="slide-content">
+              <h1> Musée des Confluences,</h1>
+              <p>
+               The former governor’s palace and home to the notorious Thami El Glaoui, Lord of the Atlas.<br>
+                Now the Musée des Confluences, it houses the archaeological collection of American Patty Birch and puts on shows exploring the intersection of eastern and western cultures.<br>
+
+                Why go? This is probably the most beautiful construction in the medina,<br>
+                 vast in ambition and covered in intricate detail: coffered cedar ceilings, geometric tiling, stucco worked into elaborate floral motifs.<br>
+                 Don’t miss Marrakech’s best coffee shop, Bacha Coffee House, which serves more than 40 brews in the same building. </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293734-d13378052-Reviews-Dar_El_Bacha_Musee_des_Confluences-Marrakech_Marrakech_Safi.html">READ MORE</a></span>  
+            </div>
+          </div>
+
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1> The Mellah,</h1>
+              <p>What is it? The Jewish quarter of Marrakech,<br>
+                 which has undergone an extensive renovation programme. <br>
+                 Make sure to visit the Al Azama synagogue and the extraordinary Miara cemetery.<br>
+
+                Why go? Tours give an insight into a fascinating part of Marrakech’s (and Morocco’s) history. <br>
+                This area of the city is rarely explored by tourists other than Jewish heritage groups – get down before everyone else cottons on.</p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293734-d478122-Reviews-Mellah-Marrakech_Marrakech_Safi.html">READ MORE</a></span>  
+            </div>
+          </div>
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>

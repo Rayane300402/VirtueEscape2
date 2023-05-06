@@ -1,0 +1,170 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Cardoba</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="csscardoba.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+  
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+              <h1>La Mezquita (The Great Mosque),</h1>
+               <p>
+                La Mezquita is the Great Mosque that was created for the Caliphate of Córdoba,<br>
+                 an important Moorish kingdom of Andalusia. Built in the eighth century, the UNESCO-listed Mezquita<br>
+                  is a masterpiece of Islamic architecture and is considered one of the most striking monuments of Moorish Spain.<br>
+                  The mosque was converted to a cathedral in 1523 by the Catholic Monarchs.<br>
+                   The cathedral's sanctuary, with its Gothic choir, was plopped right in the center of the mosque,
+                    while keeping the basic framework of the Islamic architecture. <br>
+                    The mosque-to-cathedral conversion makes for an incongruous sense of design but serves as a reminder of Córdoba's multicultural heritage.
+            </p>
+               <span class="read"><a href="https://www.tripadvisor.com/ShowUserReviews-g187430-d243774-r323262377-Mezquita_Cathedral_de_Cordoba-Cordoba_Province_of_Cordoba_Andalucia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+             <h1> Judería (Old Jewish Quarter),</h1>
+             <p>
+                The old Jewish quarter is one of the most delightful areas of Córdoba to explore. With its narrow lanes,<br>
+                 whitewashed houses, flower-filled patios, and quiet little squares, this area has a very distinctive atmosphere.<br>
+
+                Besides the enchanting Andalusian ambience, highlights of this historic neighborhood include two important Jewish monuments: the 15th-century Mudéjar-style synagogue at the center of the quarter,<br>
+                 and the Casa de Sefarad (House of Spanish Jews) museum; both sights are on the Calle Judíos.<br>
+                 The Casa de Sefarad has been restored to its 14th-century glory and features five themed rooms that illustrate the history and culture of the Sephardi (Spanish Jews).
+            </p>
+             <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187430-d519950-Reviews-Jewish_Quarter_Juderia-Cordoba_Province_of_Cordoba_Andalucia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Palacio de Viana,</h1>
+              <p>
+           
+                The Palacio de Viana is an aristocratic palace that dates back to the 15th century. <br>
+                Open to the public as a museum, the palace features the original decor of previous owners.<br>
+                 Visitors have a chance to admire an exceptional assortment of paintings, antique furniture, <br>
+                 and tapestries.
+               The grounds include 12 patios designed in the Andalusian style with decorative fountains and lush landscaping. <br>
+               Each patio reveals a unique style, from the 16th-century reception courtyard with porticoed galleries to a courtyard filled with fragrant orange trees.
+
+              Within the lavish grounds are fountains, formal parterres, pebbled paths, and elegant arcades. <br>
+              Lovely date palms, vibrant bougainvillea, and sweet jasmine are planted throughout the garden.
+            </p>
+              <span class="read"><a href="https://www.civitatis.com/en/cordoba/viana-palace-tour/">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide4">
+            <div class="slide-content">
+            <h1>Museo de Bellas Artes,</h1>
+            <p>
+                Córdoba's Museum of Fine Arts is housed in the former Hospital de la Caridad de Nuestro Señor Jesucristo, <br>
+                a 15th-century hospital that belonged to a Catholic monastery. <br>
+                The museum has an excellent collection of Spanish paintings from the 15th to the 21st centuries.<br>
+
+                Highlights include the works by Zurbarán, Alejo Fernández, Antonio del Castillo, Valdés Leal, and Julio Romero de Torres.<br>
+                 Visitors are also surprised by the interesting assortment of 17th-century, 19th-century, and contemporary sculptures displayed throughout the museum.
+            </p>
+            <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187454-d19317711-Reviews-Museo_de_Bellas_Artes-Bilbao_Province_of_Vizcaya_Basque_Country.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1> Iglesia de San Miguel,</h1>
+              <p>
+                This church belongs to the group of 14 parish churches built after the Reconquest of Córdoba. <br>
+                These churches are called Fernandinas, and many were renovations of old mosques.<br>
+                 Most of the Fernandinas were built with repurposed materials, which explains why they have Roman and Moorish columns.<br>
+
+            The Church of San Miguel features Romanesque elements as well as Caliphate-era and Mudéjar details. <br>
+            The distinctive architectural styles are seen in the baptismal chapel and the Epistle side doorway. <br>
+            Some of the arches incorporate Hebrew characters.
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g262065-d10770444-Reviews-Iglesia_de_San_Miguel-Cuenca_Province_of_Cuenca_Castile_La_Mancha.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>

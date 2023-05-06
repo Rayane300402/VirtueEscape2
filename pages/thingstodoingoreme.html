@@ -1,0 +1,161 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Goreme</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssgoreme.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+             <h1>Red Valley,</h1>
+             <p>
+                Red Valley (Kizil Vadasi) is famous for the red-rose colour of the rocks,<br>
+                 it is one of the most stunning of the many valleys in the Cappadocia region. <br>
+                There are many opportunities for hiking, quad biking and horseback riding through the valley.<br>
+                The Red Valley elevation is 5,200 meters above sea level.<br>
+                The hike is joined with Rose Valley in most cases and leads you through an ancient church inside one of the caves, past yellow sandstone rock formations <br>
+                 and incredible cave dwellings. The trail is diverse<br>
+                 and only moderate in difficulty making it a perfect adventure and of the top things to do in Cappadocia.
+
+             </p>
+             <span class="read">
+             <a href="https://www.journeyera.com/red-valley-hike-sunset-viewpoint-cappadocia/" >READ MORE</a>
+            </span>
+            </div>
+          </div>
+
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+              <h1>Flying In An Airballoon At Sunrise,</h1>
+              <p>
+                The Cappadocia hot air balloons are fast-becoming one of the most common travel bucket list items in the world.<br>
+                 It’s not hard to see why as you seamlessly float above the historic cave dwellings of Goreme Town <br>
+                 with over 100 other balloons at sunrise in what can only be likened to a fairytale scene.<br>
+                 half of the spectacle is seeing all the other balloons in the air at the same time,<br>
+                  not just the epic landscape you are flying over. 
+              </p>
+              <span class="read">
+              <a href="https://www.yogawinetravel.com/what-to-know-about-hot-air-ballooning-in-cappadocia-turkey/">READ MORE</a>
+            </span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Goreme Open Air Museum</h1>
+              <p>
+                The Goreme Open-Air Museum is a beautifully dense complex of monasteries placed side-by-side,<br>
+                 each housing an incredibly detailed and historic church. Because of its location in the center of the valley,<br>
+                 it is one of the most popular things to do in Cappadocia.<br>
+                 with an audio-tour guiding you through the ancient paintings,churches and cave houses from centuries ago.<br>
+
+              </p>
+              <span class="Read"><a href="https://cappadocia4u.com/goreme-open-air-museum/">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide4">
+            <div class="slide-content">
+              <h1>Uchisar Castle</h1>
+              <p>
+                he Uchisar Castle is in the small, but beautiful town of Uchisar in Cappadocia, Turkey.<br>
+                It’s one of the best viewpoints in Cappadocia and only a short drive or a small trek from the nearby town of Goreme. <br>
+                With 360-degree views, there really is a lot to take in <br>
+                so make sure you walk around to all corners to see out over Goreme and all of the surrounding valleys.<br>
+                 Making your way is one of the most fun things to do in Cappadocia!
+              </p>
+              <span class="Read"><a href="https://www.tripadvisor.com/Attraction_Review-g297988-d307878-Reviews-Uchisar_Castle-Uchisar_Cappadocia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1> Visit The Twin Fairy Chimneys</h1>
+              <p>
+                Cappadocia is full of fairy chimneys and incredible rock formations but some are just a little more amazing than others.<br>
+                 The Twin Fairy Chimneys have risen to popularity,<br>
+                 so much so that there are often hundreds of people crowded around to marvel at their brilliance. <br>
+                 Some of the cave dwellings have also been converted into boutique <span class="hotel"> <a href="https://www.tripadvisor.com/HotelsNear-g297983-d1206547-Fairy_Chimneys-Goreme_Cappadocia.html">hotels</a></span> where cave rooms offer comfort with cozy fireplaces and gorgeous views.
+              </p>
+              <span class="Read"><a href="https://www.viator.com/Cappadocia-attractions/Fairy-Chimneys/d5609-a19077">READ MORE</a></span>
+            </div>
+          </div>
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+</body>
+</html>

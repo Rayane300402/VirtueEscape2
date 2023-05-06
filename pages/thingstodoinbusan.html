@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssbusan.css">
+    <title>Busan, South Korea Touristic Sights</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="2-mainpage.html">Virtuescape</a></div>
+    
+       
+      </header>
+        <div class="wrap">
+            <div id="arrow-left" class="arrow"></div>
+            <div id="slider">
+              <div class="slide slide1">
+                <div class="slide-content">
+                  <h1>Gwangan Bridge,</h1>
+                  <p >Stretching across Haeundae-gu and Suyeong-gu, the Gwangan Bridge is the longest bridge in Korea, offering over 100,000 magnificent lighting effects at night to form one of Korea’s finest after-dark scenes. <br>
+                      What’s more, a number of bars and restaurants are located along the bridge and provide a wide selection of dining options, ranging from authentic street food to casual meals and even fine dining
+                </p>
+                <span class="read">
+                <a 
+                href="https://www.tripadvisor.com/ShowUserReviews-g297884-d4354720-r367143757-Gwangandaegyo_Bridge-Busan.html">READ MORE</a>
+                </span>
+            </div>
+              </div>
+    
+    
+    
+    
+              <div class="slide slide2">
+                <div class="slide-content">
+                    <h1>Haeundae Beach,</h1>
+                    <p >The ideal destination for an idyllic, sun-soaked trip, Haeundae Beach promises to be an exceptional experience combining world-class luxury and untouched nature. <br>    
+                        Surrounded by deluxe hotels offering immaculate service and a wide selection of activities, guests are able to enjoy some private time while appreciating the unspoiled coastline. Haeundae Beach is also the place where some of the city’s best bars and restaurants are concentrated, making it a fine stop later in the evening</p>
+                        <span class="read">
+                    <a
+                            href="https://www.tripadvisor.com/Attraction_Review-g297884-d1458553-Reviews-Haeundae_Beach-Busan.html">READ MORE</a>
+                    </span>
+                        </div>
+              </div>
+    
+    
+    
+    
+    
+               <div class="slide slide3">
+                <div class="slide-content">
+                    <h1> Jagalchi Market,</h1>
+                    
+                    <p>This fish market is a remarkable landmark that appears on every bucket list, providing a rare opportunity for travellers to experience the best of Korean seafood and local culture. Along the main street, a massive collection of food stalls selling authentic street food and traditional drinks attract the attention of foodies. <br>
+                        Vendors offering an overwhelming variety of cooked and raw dishes including squid, octopus, crab, starfish, oysters and mussels are scattered inside the market itself</p>
+                        <span class="read">
+                    <a href="https://www.tripadvisor.com/Attraction_Review-g297884-d1372972-Reviews-Jagalchi_Market-Busan.html">READ MORE</a>
+                </span>
+                </div>
+              </div>
+    
+    
+    
+    
+    
+              <div class="slide slide4">
+                <div class="slide-content">
+                 <h1>SEA LIFE Busan Aquarium,</h1>
+                 <p>
+                    This aquarium just around the corner from Haeundae Beach offers an inspiring journey of discovery. The massive collection of sea creatures covering more than 250 species of aquatic life is a window into the untold secrets of the marine world. <br>
+                    
+                    Divided into eight themed zones, travellers can peep into the mysterious behaviour of the exotic animals here.
+    
+                 </p>
+                 <span class="read">
+                 <a href="https://www.tripadvisor.com/Attraction_Review-g297884-d669986-Reviews-SEA_LIFE_Busan_Aquarium-Busan.html" class="read">READ MORE</a>
+                </span>
+                </div>
+              </div>
+    
+            </div>
+            <div id="arrow-right" class="arrow"></div>
+          </div>
+    
+    
+    
+    <script>
+      let sliderImages = document.querySelectorAll(".slide"),
+      arrowLeft = document.querySelector("#arrow-left"),
+      arrowRight = document.querySelector("#arrow-right"),
+      current = 0;
+    
+    // Clear all images
+    function reset() {
+      for (let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].style.display = "none";
+      }
+    }
+    
+    // Init slider
+    function startSlide() {
+      reset();
+      sliderImages[0].style.display = "block";
+    }
+    
+    // Show prev
+    function slideLeft() {
+      reset();
+      sliderImages[current - 1].style.display = "block";
+      current--;
+    }
+    
+    // Show next
+    function slideRight() {
+      reset();
+      sliderImages[current + 1].style.display = "block";
+      current++;
+    }
+    
+    // Left arrow click
+    arrowLeft.addEventListener("click", function() {
+      if (current === 0) {
+        current = sliderImages.length;
+      }
+      slideLeft();
+    });
+    
+    // Right arrow click
+    arrowRight.addEventListener("click", function() {
+      if (current === sliderImages.length - 1) {
+        current = -1;
+      }
+      slideRight();
+    });
+    
+    startSlide();
+    
+        
+        </script>
+</body>
+</html>

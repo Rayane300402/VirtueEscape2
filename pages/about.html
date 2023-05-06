@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ABOUT</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <meta http-equiv="X-UX-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <div class="toggle" onclick="toggle();"></div>
+        </header>
+        
+        <div class="container">
+
+            <div class="contentsection">
+
+                <div id="title">
+                    <h1>About Us</h1>
+                </div>
+
+                <div class="content">
+                    <h3>Never been on an airplane? no problem.<br></h3>
+                    <p>
+                        this website is designed for those who aspire to travel the world and see all of the magic that
+                        is around us <br>
+                        yet unable to do so because of the pandemic.<br>
+                        you can check any country you want, choose the city that your heart desires..and expect the
+                        unexpected!<br>
+                        Who knew we are surrounded with this much beauty? Life is so underrated.<br>
+                        Take a breathe, show the universe some gratitude and continue enjoying what we have to offer
+                        dear!<br>
+                        Make sure to follow us on all of our social media accounts listed bellow!<br>
+                        WARNING:This website might have some serious side effects like wanting to leave the house to
+                        travel the world with no warning and never look back.
+
+                    </p>
+                </div>
+                <div class="socialmedia">
+
+
+                    <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+                </div>
+
+
+            </div>
+
+            <div class="image">
+                <img src="../images/about.gif" alt="travelwithus">
+            </div>
+
+        </div>
+       
+    
+    <ul class="menu">
+        <li><a href="2-mainpage.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="teams.html">TEAM</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul> 
+ </section>
+ <script type="text/javascript">
+    function toggle(){
+            const toggle = document.querySelector('.toggle');
+            const banner = document.querySelector('section');
+            toggle.classList.toggle('active')
+            banner.classList.toggle('active')
+        }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Madrid</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssmadrid.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+  
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+              <h1> The Prado,</h1>
+               <p>
+                Absolutely essential, the Prado is one of the best and most popular art museums in the world.<br>
+
+                There’s an overwhelming collection of masterpieces by renaissance and baroque masters.<br>
+                
+                Spain is represented by Velázquez and El Greco, the low countries by Rembrandt, Brueghel, van Dyck and Rubens, while Titian, Caravaggio, Botticelli and Tintoretto form the Italian contingent.<br>
+                
+                Of the many must-see works are Bosch’s Garden of Earthly Delights and David with Head of Goliath by Caravaggio.<br>
+                
+                The artist with most works hanging at the Prado is the Spanish Romantic Goya, whose 14 Black Paintings are a Spanish cultural reference point.
+             </p>
+               <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187514-d190143-Reviews-Prado_National_Museum-Madrid.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+             <h1> Retiro Park,</h1>
+             <p>
+                Madrid’s green heart and full of elegant gardens, the Retiro is just a few steps east from the Prado and was a royal property up to the end of the 19th century when it was opened to the public.<br>
+
+                If you’re visiting with little ones, paddling on the Grand Pond next to the monument of Alfonso XII is a fun option on a sunny afternoon.<br>
+                
+                The iron and glass pavilion built to house the Philippine Exhibition in 1887 is magnificent and growing in the pond in front of it are bald cypresses, strange swamp trees that turn  a lovely golden brown in summer.<br>
+                
+                The oldest tree in the city is close by: It’s a Montezuma Cypress planted in 1633 and ringed by an iron fence.
+             </p>
+             <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187514-d191050-Reviews-Parque_del_Retiro-Madrid.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1> Puerta del Sol,</h1>
+              <p>
+                This grand square next to the Casa de Correos (Post Office Building) is a popular meeting place, suffused with meaning for  both city and country.<br>
+
+                Nearly every Spanish person will recognise the clock at the top of the Casa de Correos, as this marks the televised countdown on New Year’s Eve.<br>
+                
+                There’s a tricky ritual involved too: With every chime you’re supposed to eat a grape for good luck (12 in total). <br>
+                Also in the square the is El Oso y El Madroño statue, a symbol for Madrid since the Middle Ages.
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187514-d190140-Reviews-Puerta_del_Sol-Madrid.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide4">
+            <div class="slide-content">
+            <h1>Gran Vía,</h1>
+            <p>
+                If you’d like to get a sense of the city,  a walk along the Gran Vía is a superb place to start.<br>
+
+It’s Madrid’s entertainment, shopping and cultural nerve centre, a buzzing avenue often full of life until dawn.<br>
+
+By day it throngs with shoppers stopping by the many malls, high-street stores like H&M and Zara and luxury boutiques.<br>
+
+In the evenings there are couples arm-in-arm, stepping out to the cinema or a musical.<br>
+
+And after dark the street pulses with many of Madrid’s top nightclubs.
+
+Sights to spot as you stroll include the vast Telefónica Building, built in 1928 and an early example of a skyscraper.  </p>
+            <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187514-d246516-Reviews-Gran_Via-Madrid.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1>Plaza Mayor,</h1>
+              <p>
+                Another of Madrid’s “musts”, Plaza Mayor is a handsome renaissance square, laid out in the early-1600s and completely sequestered by historic three-storey-high residential buildings.<br>
+
+                There are nine entrances to the square and within the porticoes at the bottom of the buildings are several cafes.<br>
+                
+                Order a coffee (overpriced but necessary because of the location!) at an outdoor table and watch Madrid in action for a few minutes.<br>
+                
+                After that you could wander up to the 400-year-old bronze statue of King Philip III, who was in power at the height of the Spanish empire.  </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187514-d190142-Reviews-Plaza_Mayor-Madrid.html">READ MORE</a></span>
+            </div>
+          </div>
+ 
+
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>

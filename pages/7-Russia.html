@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick a city in Russia</title>
+    <link rel="stylesheet" href="turkey.css">
+</head>
+
+<body>
+    <section class="banner">
+        <header>
+            <div class="toggle" onclick="toggle();"></div>
+        </header>
+        <!--image card layout-->
+        <div class="container">
+            <div class="row">
+                <div class="image">
+                    <img src="../images/Russia/Moscow.jpg" width="450px" height="300px">
+                    <div class="content">
+                        <h2><span>Moscow</span>,Russia</h2>
+                        <p>Check the land that connects Europe to Asia. Where a long history resides, the only place where you can fully see the life of the Ottomans of the pasts.</p>
+                        <div class="read">
+                            <a href="thingstodoinmoscow.html" class="read-more">Read <span>More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../images/Russia/st-petersburg.jpg" width="450px" height="300px">
+                    <div class="content">
+                        <h2><span>St.Petersburg</span>,Russia</h2>
+                        <p>Wherever you look, history will look back at you, experience flying like you've never
+                            experienced before. I mean, who says only birds can fly? </p>
+                        <div class="read">
+                            <a href="thingstodoinst.html" class="read-more">Read <span>More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../images/Russia/sochi.jpg" width="450px" height="300px">
+                    <div class="content">
+                        <h2><span>Sochi</span>,Russia</h2>
+                        <p>The old harbor of Turkey, the toursim embraced city. Feast your eyes on the turquoise colored
+                            coast, and its history as an olf Roman port</p>
+                        <div class="read">
+                            <a href="thingstodoinsochi.html" class="read-more">Read <span>More</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="../images/Russia/yekaterinburg.jpg" width="450px" height="300px">
+                    <div class="content">
+                        <h2><span>Yekaterinburg</span>,Russia</h2>
+                        <p>The old lands wrapping you with its mountains, trees, roads and houses. A history about the
+                            start and its arts. A whole new dimension awaits </p>
+                        <div class="read">
+                            <a href="thingstodoinyekaterinburg.html" class="read-more">Read <span>More</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="menu">
+            <li><a href="2-mainpage.html" >HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="teams.html">TEAM</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function toggle() {
+            const toggle = document.querySelector('.toggle');
+            const banner = document.querySelector('.banner');
+            toggle.classList.toggle('active')
+            banner.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>

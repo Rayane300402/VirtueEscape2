@@ -1,0 +1,159 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Moscow</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssmoscow.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+  
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+              <h1> Pushkin State Museum of Fine Arts,</h1>
+               <p>
+                The largest foreign art museum in Moscow comprises three branches housing a collection of incredible works by masters of ancient civilisations, <br>
+                the Italian Renaissance and the Dutch Golden Age. The main building contains masterpieces by Botticelli,<br>
+                 Tiepolo, Veronese and Rembrandt, some of which have never been displayed before.<br>
+                  The Gallery of European & American Art, located next door, stores an incredible collection of Impressionist and post-Impressionist paintings.  
+                 </p>
+               <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298484-d300242-Reviews-Pushkin_State_Museum_of_Fine_Arts-Moscow_Central_Russia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+             <h1> Izmailovsky Market,</h1>
+             <p>
+                For those on a slightly more limited budget, <br>
+                ditch window shopping at the exclusive GUM and take a foray into the madly bustling world of Izmailovsky,<br>
+                 Russia’s best flea market. Delve into the bargains, rifle through the artisan crafts, admire the local handiwork and be tempted by the silky smooth traditional fur hats. <br>
+                 Expect walls of matryoshka dolls, fascinating Soviet memorabilia, and glittering hand-crafted jewellery.<br>
+                  Head up to one of Izmailovsky market‘s cafés for a warming mulled wine before continuing your shopping spree. </p>
+             <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298484-d300378-Reviews-Izmailovsky_Market-Moscow_Central_Russia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Bolshoi Theatre,</h1>
+              <p>
+                The Muradiye Complex or the Complex of Sultan Murad II, the Ottoman sultan, is located in Bursa, Turkey.<br>
+                Bursa was the first Ottoman-era capital, <br>
+                and this complex holds the tombs of some of the empire's earliest sultans and family.<br>
+
+
+                Anyone with an interest in the artistic heritage of the Ottoman period will appreciate a visit here,<br>
+                 as the tombs are decorated with exceptional examples of artwork from the era - replete with colorful tile work and intricate calligraphy.<br>
+                
+                There are 12 tombs set into the site
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298484-d302506-Reviews-Bolshoi_Theatre-Moscow_Central_Russia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide4">
+            <div class="slide-content">
+            <h1>Kolomenskoye,</h1>
+            <p>
+                A 10-minute metro ride from the city centre will take you to Kolomenskoe Museum-Reserve,<br>
+                 where you can get an idea of what Medieval Moscow looked like. <br>
+                 Here you’ll find ancient churches (one dating back to the 16th century), the oldest garden in Moscow and a favourite estate of Tsar Alexey Mikhailovich,<br>
+                  father of Peter the Great. </p>
+            <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298484-d300345-Reviews-Kolomenskoye_Historical_and_Architectural_Museum_and_Reserve-Moscow_Central_Russia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1>Cathedral of Christ the Saviour,</h1>
+              <p>
+                One of Russia’s most visited cathedrals, the Cathedral of Christ the Saviour is a truly remarkable site.<br>
+                The grandiose cathedral was built in the 1990s where a 19th-century church of the same name once stood, prior to being demolished in 1931 by the Soviet authorities.<br>
+                 For 50 years the place had been home to the world’s largest outdoor swimming pool, until the country’s new government decided to rebuild the sacred place.<br>
+                  Designed to look like its predecessor, the modern building also contains the icon Christ Not Painted by Hand by Sorokin,<br>
+                   which miraculously survived the demolition of the original cathedral.
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298484-d541859-Reviews-Cathedral_of_Christ_the_Saviour-Moscow_Central_Russia.html">READ MORE</a></span>
+            </div>
+          </div>
+ 
+
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>

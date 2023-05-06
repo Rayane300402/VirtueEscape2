@@ -1,0 +1,155 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Sochi</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="csssochi.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+  
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+              <h1> Krasnaya Polyana,</h1>
+               <p>
+                If you are wondering what to do in Sochi in winter,then here is something for you.<br>
+                 Although popular as a beach resort, Sochi is also gaining prominence for winter sports activities like skiing.<br>
+                  The ideal skiing season ranges from December to April which differs every year. <br>
+                  After the 2014 Winter Olympics, Krasnaya Polyana started witnessing double the influx of tourists.<br>
+                   This led to the upgradation of new resorts in the area with international standards like Rosa Khutor. <br>
+                   Take a slide through the snow and enjoy the panoramic views of the grandeur West Caucasus mountains! </p>
+               <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298536-d307455-Reviews-Krasnaya_Polyana_Mountain_Cluster-Sochi_Greater_Sochi_Krasnodar_Krai_Southern_Dist.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+             <h1> Black Sea,</h1>
+             <p>Knowing what to do in Sochi Russia will make you enjoy the best vacation in 2021.<br>
+                 Beached in Sochi are its biggest drawcards, without a doubt. There is plenty of space to choose from in the 150 km coastline running along with the city.<br>
+                  But for a better experience, you might want to opt for a seaside resort as the resorts here have privatized the beaches to provide a luxury experience to its guests. <br>
+                  Private beaches are not crammed with people and thus provides an unforgettable experience to tourists.<br>
+                   So, if you want to beat the heat then take a plunge into the black sea in Sochi.
+                  </p>
+             <span class="read"><a href="https://www.booking.com/resorts/region/ru/black-sea-region-russia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Mount Akhun,</h1>
+              <p>Tucked between the Khosta and Matsesta rivers, Mount Akhun with a height of about 663 meters is considered as the highest littoral point of Sochi.<br>
+                 You can visit the top of the Romanesque-like tower built in 1936,<br>
+                  The Observation Tower, on this mountain and enjoy the panoramic view of the city including seacoast and snow-clad mountains.<br>
+                  After exploring the area, you can mellow out in the cafe in the tower and enjoy the view from the top of the mountain.
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g2641568-d4999869-Reviews-The_Observation_Tower_on_Akhun_Mountain-Khosta_Khosta_District_Sochi_Greater_Soc.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide4">
+            <div class="slide-content">
+            <h1>Dagomys Tea Plantation,</h1>
+            <p>
+                It is believed to be the northernmost tea plantation in the world<br>
+                 and purveys the stunning view of rolling hills exhibiting lush green plantation of tea.<br>
+                 This place also organizes numerous events and activities making it a hotspot for tourists.<br>
+                  If you are willing to enjoy the 19th-century style tea party then do plan a visit to this gorgeous location<br>
+                   where you can also here melodious folklores and traditional Russian songs. </p>
+            <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298536-d307454-Reviews-Dagomys_Tea_Plantation-Sochi_Greater_Sochi_Krasnodar_Krai_Southern_District.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1>Museum Of The Resort Town Of Sochi,</h1>
+              <p>
+                If you are interested in sneaking the rich,<br>
+                 diverse and cultural history of Russia under one roof then do plan a visit to this illumination museum located in Sochi.<br>
+                  This museum features an enormous collection of artifacts and other interesting discoveries by local mountaineers.<br>
+                   If you have a love for history and looking to indulge in the past of this serene place <br>
+                   then do head to this interesting museum. 
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298536-d2333839-Reviews-Historical_Museum_of_Sochi-Sochi_Greater_Sochi_Krasnodar_Krai_Southern_District.html">READ MORE</a></span>
+            </div>
+          </div>
+ 
+
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Rabat</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssrabat.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+   
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+        <div id="slider">
+
+
+          <div class="slide slide1">
+            <div class="slide-content">
+             <h1>Old Medina,</h1>
+             <p>
+                The old medina is something that cannot be missed from any list of things to do in a Moroccan town or city. <br>
+                It is by far the best place to get traditional Moroccan souvenirs, and really experience the heart of the city. <br>
+                Here you can haggle for the best prices and take in the sights, sounds and scents.<br>
+                 Thankfully, Rabat is a much calmer and easy going city in comparison to cities such as Marrakech and Casablanca. <br>
+                 This makes the old medina less chaotic and slightly more accessible. It allows visitors to experience the true Morocco in a more relaxed fashion, with wider streets and a less bustling environment.
+             </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293732-d481124-Reviews-Old_Medina_of_Casablanca-Casablanca_Casablanca_Settat.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+              <h1>Ancient Kasbah des Oudaias,</h1>
+              <p>
+                Built upon a cliff overlooking both the Atlantic Ocean and the Bou Regreg River,<br>
+                 the Kasbah des Oudaias is the original site of the city of Rabat.<br>
+                Exploring the city by foot requires entering through the massive ornate gates that mark the city’s entrance, <br>
+                and it is the only way to experience the small wonders that dot the streets, including gorgeous hand-painted doors and pottery set out on display.<br>
+                
+                Throughout the narrow streets, Gnawa musicians play their instruments, adding to the enchanting atmosphere that hangs heavy within the walls.
+            </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293736-d481071-Reviews-Kasbah_des_Oudaias-Rabat_Rabat_Sale_Kenitra.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Royal Palace of Rabat,</h1>
+              <p>Located between the Quartier des Orangers and Agdal-Ryad neighborhoods, the Royal Palace of Rabat is the palatial residence of Morocco’s Royal Family.<br>
+                 Also called the Dar al-Makhzen, the palace is heavily guarded, particularly near the enormous and ornately decorated door leading into the palace grounds.<br>
+
+                While visitors are not permitted inside of the palace, the beautiful gate provides an excellent photo opportunity.<br>
+                 Guests can also hire a guide or join a city tour to learn more about the history and politics of Morocco
+                </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293736-d481103-Reviews-Royal_Palace_of_Rabat-Rabat_Rabat_Sale_Kenitra.html">READ MORE</a></span>
+
+            </div>
+          </div>
+
+          
+          <div class="slide slide4">
+            <div class="slide-content">
+              <h1> Andalusian Gardens,</h1>
+              <p>
+                Nestled at the entrance of the Kasbah des Oudaias, the Andalusian Gardens offer a tranquil retreat from the surrounding bustle of the city.<br>
+                 During Morocco’s colonial period, the French designed and laid out the picturesque grounds with fruit trees, flowers, and exotic flora.<br>
+
+                Inside the walled garden, visitors will find a small cafe that offers mint tea and light snacks with beautiful views of the sea.<br>
+                 The vast areas of shade created by the mature trees make this a perfect place to cool off on a hot day while still enjoying the outdoors.
+                </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293736-d2345005-Reviews-Andalusian_Gardens-Rabat_Rabat_Sale_Kenitra.html">READ MORE</a></span>  
+            </div>
+          </div>
+
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1> Mohammed VI Museum of Modern & Contemporary Art,</h1>
+              <p>
+                The creation of this museum stands as a commitment to the development of Morocco’s artistic community, <br>
+                honoring its past while encouraging creativity in future generations.<br>
+
+                Visitors will find an impressive display of Moroccan visual artists from the 20th century all the way up to the present day featured in the permanent collection,<br>
+                 while the museum also hosts a rotating collection of traveling exhibitions.<br>
+                
+                Located in the Quartier des Orangers, the museum can easily be paired with dinner and a show at the National Theater.      
+            </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g293736-d4043308-Reviews-Museum_Mohamed_VI_of_Modern_and_Contemporary_Art-Rabat_Rabat_Sale_Kenitra.html">READ MORE</a></span>  
+            </div>
+          </div>
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>

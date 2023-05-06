@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Istanbul</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssistanbul.css">
+</head>
+
+
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+
+   
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+              <h1>The Bosporus or Bosphorus,</h1>
+              <p >The Bosporus or Bosphorus, <br>
+                also known as the Strait of Istanbul, <br>
+                Since the ancient times it held always an important role because of its strategic location,
+                <br> being the only passage from the Black Sea into the Mediterranean,
+                is a narrow, natural strait and an internationally significant waterway located in northwestern
+                Turkey.<br>
+                It forms part of the continental boundary between Europe and Asia,
+                <br> and divides Turkey by separating Anatolia from Thrace.
+            </p>
+            <span class="read">
+            <a 
+            href="https://www.tripadvisor.com/Attraction_Review-g293974-d1657485-Reviews-Bosphorus_Strait-Istanbul.html">READ MORE</a>
+            </span>
+        </div>
+          </div>
+
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+                <h1>Süleymaniye Mosque,</h1>
+                <p >The Süleymaniye Mosque was designed by the famous architect Sinan for Süleyman the Magnificent, <br>
+                    and is a
+                    great tribute to both.<br> 
+                    It’s actually much more than a place of worship.<br>
+                     It’s a complex of
+                    buildings containing a hospital, a kitchen, a school,etc.<br>Don’t forget to visit the tombs of
+                    Süleyman and Roxalana behind the graveyard, <br>the tomb of Sinan outside the complex, <br>and eat kuru
+                    fasulye (haricot beans) <br>in one of the many restaurants in the Alley of Addicts.</p>
+                    <span class="read">
+                <a
+                        href="https://theculturetrip.com/europe/turkey/articles/the-top-10-things-to-do-and-see-in-galata-istanbul/">READ MORE</a>
+                </span>
+                    </div>
+          </div>
+
+
+
+
+
+           <div class="slide slide3">
+            <div class="slide-content">
+                <h1> Kariye Museum,</h1>
+                
+                <p>The beautiful Chora Museum, with its mesmerising mosaics and frescoes,<br>
+                    is one of the unforgettable places in Istanbul. <br>
+                    it is one of the most amazing religious building Istanbul has to offer.<br>
+    
+                    The walls and ceilings of this church are adorned with stunning Byzantine mosaics and fabulous frescoes.
+                    <br>
+                    Some are considered as the most significant in the Christian world.<br>
+    
+                    And while you’re there, <br>
+                    enjoy the remains of the fifth century city walls and the wooden Ottoman houses. </p>
+                    <span class="read">
+                <a href="https://www.viator.com/Istanbul-attractions/Kariye-Museum-Chora-Church/d585-a9055">READ MORE</a>
+            </span>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="slide slide4">
+            <div class="slide-content">
+             <h1>Grand Bazaar,</h1>
+             <p>
+                a center for local trade of clothing and jewels<br>
+                One of the largest and oldest covered bazaars in the world,<br>
+                 the Grand Bazaar is 30,700 square meters with over 60 streets and alleys and 4,000 shops.<br>
+                  The original historical core of the bazaar, İç Bedesten, was completed by Mehmet the Conqueror in 1461.
+
+             </p>
+             <span class="read">
+             <a href="https://www.tripadvisor.com/Attractions-g293974-Activities-zfn7811846-Istanbul.html" class="read">READ MORE</a>
+            </span>
+            </div>
+          </div>
+
+
+
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1>Gelata Tower,</h1>
+              <p>
+                offers the best panoramic views of the city.<br>
+                Originally named the Tower of Christ, the 66.9-meter (220-foot)-high tower was the highpoint in the city walls of the Genoese colony called Galata.<br>
+                Most of the walls are long gone,<br>
+                 but the great tower , with its 3.75-meter (12-foot)-thick walls remains.<br>
+              <span class="pray"><a href="https://www.google.com/search?q=praying+times+turkey&rlz=1C1CHBF_enLB856LB856&oq=praying+times+turkey&aqs=chrome..69i57j0i457j0i402l2j0j0i10j0l4.4074j0j7&sourceid=chrome&ie=UTF-8">If you want the full effect, be here at the time of a call to prayer</a></span>, preferably the sunset call.
+            </p>
+            <span class="read">
+              <a href="https://www.tripadvisor.com/Attraction_Review-g293974-d295194-Reviews-Galata_Tower-Istanbul.html">READ MORE</a>
+            </span>
+            </div>
+        </div>
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+
+<script>
+  let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+
+    
+    </script>
+</body>
+
+
+</html>

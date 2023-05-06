@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="contact.css">
+    
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+
+  <section>
+    <header>
+      <div class="toggle" onclick="toggle();"></div>
+    </header>
+  <div class="container">
+
+    <div class="form">
+
+      <div class="contact-info">
+
+        <h3 class="title">Let's get in touch</h3>
+        <p class="text">
+         Always Keep in your mind that your comfort is our priority!<br>
+         our team works day and night just to make sure that everything is organized and in order.<br>
+         Got a feedback?<br>
+         make sure you let us know what we can do to make this journey even better for you!
+        </p>
+
+
+        <div class="social-media">
+          <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>  
+          </div>
+        </div>
+        
+ </div>
+
+      <div class="contact-form">
+
+        <form action="sent.html" autocomplete="off">
+          <h3 class="title">Contact us</h3>
+          <div class="input-container">
+            <input type="text" autocomplete="username" minlength="6" maxlength="15" name="name" id="name" class="input" />
+            <label for="name">Username</label>
+            <span>Username</span>
+          </div>
+          <div class="input-container">
+            <input type="email" autocomplete="email" id="email" name="email" class="input" />
+            <label for="email">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" autocomplete="cc-number" name="phone" id="phone" class="input" />
+            <label for="phone">Phone</label>
+            <span>Phone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" id="message" class="input"></textarea>
+            <label for="message">Message</label>
+            <span>Message</span>
+          </div>
+          <input type="submit" value="send" class="btn" />
+        </form>
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+  <ul class="menu">
+    <li><a href="2-mainpage.html" >HOME</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="teams.html">TEAM</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+</ul>
+  </section>
+  <script type="text/javascript">
+    function toggle() {
+      const toggle = document.querySelector('.toggle');
+      const banner = document.querySelector('section');
+      toggle.classList.toggle('active')
+      banner.classList.toggle('active')
+    }
+  </script>
+  <script src="appp.js"></script>
+</body>
+</html>

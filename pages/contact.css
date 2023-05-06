@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body,
+  input,
+  textarea {
+    font-family: "Poppins", sans-serif;
+  }
+  body,
+  input,
+  textarea {
+    font-family: "Poppins", sans-serif;
+  }
+  
+  section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background-image: url(../images//sunset.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  section::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: 400px;
+    height: 320px;
+    background: violet;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+section.active::before{
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #000000;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+section::after{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    right: 300px;
+    width: 400px;
+    height: 320px;
+    background: rgb(241, 191, 99);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+section.active::after{
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #000000;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+}
+  
+  .container {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/sunset.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex; /*kln yseru had b3d*/
+    align-items: center;/*kln yseru bel nus*/
+    justify-content: center;
+  }
+  section.active .container{
+    transform: scale(0);
+    transform-origin: left;
+  }
+  .form {
+    width:100%;
+    max-width: 840px; /*eza sar akbr bser beghayer bel height m bel width*/
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgb(194, 99, 35);/*lshadow ele mn wara lbox*/
+    overflow: hidden;
+    display: grid;/*bt7tn had b3d msh fu2 b3d*/
+    grid-template-columns: 420px 420px;/*ade kl whde mn hal grids ykun l width tb3a l2nu ad b3d bde f kl whde ad nus l 840*/
+  }
+  
+  .contact-form { /*lbox l zhre ele feyu l forms*/
+    background-color: #fbb28b;
+    position: relative;
+  }
+  
+  
+  .contact-form:before { /*lmoraba3 l zgher ele 3jnb.. before y3ne barato*/
+    content: ""; /*y3ne m ykun feyu she fadye */
+    position: absolute; /*since contact form relative*/
+    width: 26px;
+    height: 26px;
+    background-color: #fbb28b;
+    transform: rotate(45deg);
+    top: 50px;
+    left: -13px;/*ade rayeh 3l ysar nus l 26 mshn nusu ykun bara*/ 
+  }
+  
+  form {
+    padding: 2.3rem 2.2rem; /*hwalen kl l forms*/
+    overflow: hidden;
+    position: relative;
+  }
+  .contact-info .title {  /*3nwan l lets get in touch*/
+    color: #f5a073;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1;
+    margin:2rem 0rem;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+  
+  }
+  .contact-form .title {/*3nwan l contact us*/
+    color: white;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    margin:1.6rem 0rem;
+  
+  }
+  
+ 
+  
+  .input-container {
+    position: relative; /*l label htkun absolute*/
+    margin: 1rem 0; /*ben kl form w form l msaha ele btfr2n */
+  }
+  
+  .input {
+    width: 100%;
+    outline: none;  /*bs nkbs 3l form m ytl3 khtut suda hwalena*/
+    border: 2px solid #fafafa;
+    background: none;
+    padding: 0.6rem 1.2rem;
+    color: white; /*lun l katebe*/
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    transition: 0.3s;
+  }
+  
+  textarea.input {
+    padding: 1.2rem;/*lmsaha wen m mnblsh katebe bel box enu ben l ktabe ele bde aktba wel border*/
+    min-height: 150px; /*eza zdnaha msln 200 btkbr l box kla m3a cuz min hight*/
+    border-radius: 22px;
+    resize: none;
+    overflow: auto; /*eza ktr l text yserfe scroll bs bala m ydll scroll bar mbyn*/
+  }
+  
+  .input-container label {
+    position: absolute;
+    top:25%;
+    left: 15px;
+    padding: 0 0.4rem;
+    color: #fafafa;
+    font-size: 0.9rem;
+    font-weight: 400;
+    pointer-events: none;
+    z-index: 1000;/*lahata bs nkbsa m yeje odama zhre enu ttl3 lfu2 w tld mbyne username*/
+    transition: 0.6s; /*sur3et l kelme b ena ttl3*/
+  }
+  
+  .input-container.textarea label {
+    top:10%;
+  
+  }
+  
+  .btn {
+    padding: 0.6rem 1.3rem;/*l msaha ben l send wel border*/
+    background-color: #fff;
+    border: 2px solid #fafafa;
+    font-size: 0.95rem;
+    color: #fbb28b;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    margin: 0; /*lmsaha bara ben lkbse wel osas ltane*/
+  }
+  
+  .btn:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .input-container span { /*lw m kanat transparenet kanat htkun heye l klme ele fu2 mbyne*/
+    position: absolute;
+    top: 0;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    padding: 0 0.4rem;
+    color: transparent;
+    pointer-events: none;
+
+  
+  }
+  
+  .input-container span:before,
+  .input-container span:after {
+    content: "";
+    position: absolute;
+    opacity:0;
+    width:50%;/*50% size of the word*/
+    transition: 0.3s;
+    height: 5px;
+    background-color:#fbb28b;
+    top: 50%;
+ 
+  }
+  
+  .input-container span:before {
+    left: 50%;
+  }
+  /*b2rbu 3b3d bseru nfs tul l klme*/
+  .input-container span:after {
+    right: 50%;
+  }
+  
+  .input-container.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: 0.8rem;
+  }
+  
+  .input-container.focus span:before, 
+  .input-container.focus span:after { /*bster lshahta pink wara lklme*/
+    width: 50%;
+    opacity: 1;
+  }
+  
+  .contact-info {
+    padding: 2rem ;/*lmsa7a ben el ktabe (lets get in touch...) wel boder*/
+    position: relative;
+  }
+
+  
+  .text {
+    color: #f39663;
+    margin: 3rem 0rem;
+    line-height:1.5rem;
+    text-transform: capitalize;
+
+  }
+ 
+  
+  .social-media {
+    padding: 2rem 0 0 0;
+  }
+  
+  .social-media p {
+    color: #f59562;
+  }
+  
+  .social-media p:hover {
+    color: #cf672f;
+      
+  }
+  
+  .social-icons {
+    display: flex; /*bseru had b3d*/
+    margin-top: 0.5rem; /*lmsaha benen w ben l connect with us*/
+  }
+  
+  .social-icons a {
+    width: 35px; /*size el mrb3 ele hene fe lw kan l F wel insta logo shakhseyan kan olna font size*/
+    height: 35px;
+    border-radius: 5px;
+    background: linear-gradient(45deg,#cf8e6b , #f79865);
+    color: #fff;
+    text-align: center;
+    line-height: 35px; /*lyseru b nus l moraba3*/
+    margin-right: 0.5rem;
+    transition: 0.3s;
+
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.05);
+ 
+  }
+  
+ 
+
+  .toggle{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: url(../images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    cursor: pointer;
+  }
+  
+  .toggle.active{
+    background: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+  }
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+}
+  .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+  .menu li{
+    list-style: none;
+  
+  }
+  
+  .menu li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+  }
+  
+  section.active .menu{
+    visibility: visible;
+    opacity: 1;
+    transition: 1s ease-in-out;
+  }
+  @media (max-width: 480px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    
+    .contact-info:before {
+      display: none;
+    }
+  
+
+  
+    form,
+    .contact-info {
+      display: block;;
+      padding: 1.7rem 1.6rem;
+    }
+  
+    .text,
+    .social-media p {
+      font-size: 0.8rem;
+    }
+  
+    .title {
+      font-size: 1.15rem;
+    }
+  
+    .social-icons a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+  
+    .icon {
+      width: 23px;
+    }
+  
+    .input {
+      padding: 0.45rem 1.2rem;
+    }
+  
+    .btn {
+      padding: 0.45rem 1.2rem;
+    }
+  }
+ 
+@media (max-width: 850px) {
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .contact-info:before {
+    bottom: initial;
+    top: -75px;
+    right: 65px;
+    transform: scale(0.95);
+  }
+
+  .contact-form:before {
+    top: -13px;
+    left: initial;
+    right: 70px;
+  }
+
+  .text {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .social-media {
+    padding: 1.5rem 0 0 0;
+  }
+}

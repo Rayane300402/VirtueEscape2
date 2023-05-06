@@ -1,0 +1,171 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Barcelona</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssbarcelona.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+  
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+              <h1> Las Ramblas,</h1>
+               <p>
+                Never mind that a lot of locals shun this sequence of promenades that runs from Plaça de Catalunya down to the Columbus Monument at the waterfront.<br>
+
+                If you’re a tourist it’s one of those things that you have to do.<br>
+                
+                In summer you’ll be under the shade of the tall plane trees and shuffling through the crowds that pass living statues,<br>
+                street performers, bird-sellers and flower stands.<br>
+                
+                Occasionally you’ll catch the whiff of waffles (gofres) being baked.<br>
+                
+                Once you get to the water you can keep going along the boards to visit the Maremagnum mall or Barcelona’s Aquarium.
+                
+             </p>
+               <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190163-Reviews-Las_Ramblas-Barcelona_Catalonia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+             <h1> Sagrada Família,</h1>
+             <p>
+                This is where to begin your adventure through Barcelona and the dreamlike works of Antoni Gaudí.<br>
+
+                His minor basilica is a project of incredible scale and ambition that is still only around three quarters complete more than a 140 years after Gaudí first became involved.<br>
+                
+                When its spires are finished it will be the tallest church building in the world, and hardly resembles any religious structure you’ll have seen in your life.<br>
+                
+                The Sagrada Família combines several architectural styles including Catalan Modernism, Art Nouveau and Spanish Late-Gothic, but Gaudí’s masterpiece defies these kinds of definitions when you look up open-mouthed at the ceiling of the nave.
+
+             </p>
+             <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d190166-Reviews-Basilica_of_the_Sagrada_Familia-Barcelona_Catalonia.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1> Montjuïc,</h1>
+              <p>
+                This city district was developed for the 1929 International Exhibition and features several high-profile museums including the National Museum of Catalan Art, the Museum of Archaeology and the Ethnology Museum.<br>
+
+                Of those the art museum is particularly recommended, and the views of the city from its steps are stunning.<br>
+                
+                Below this, and also built for the exhibition was the Magic Fountain, which puts on light and music shows ever half-hour on the weekends. This is best seen at night of course.<br>
+                
+                At the very top of the hill is the 17th-century fortress, which saw action in the Catalan Revolt in the 1600s as well as during the Civil War in the late-1930s, after which it was a prison.  </p>
+              <span class="read"><a href="https://theculturetrip.com/europe/spain/articles/top-10-things-to-do-and-see-in-sants-montjuic/">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide4">
+            <div class="slide-content">
+            <h1>Palau de la Música Catalana,</h1>
+            <p>
+                This turn-of-the-century concert hall is yet another piece of Barcelona’s UNESCO-listed heritage.<br>
+
+                It was built by Gaudí’s contemporary, Lluís Domènech i Montaner for the Orfeó Català, a Barcelona choral society.<br>
+                
+                This was at a time when investment and commissions by wealthy Catalan industrialists were helping a generation of artists and designers to create a new sense of Catalan identity.<br>
+                
+                The hall is a sublime venue for opera, symphonies and folk music, so have a look at the schedule when you plan your trip .<br>
+             </p>
+            <span class="read"><a href="https://ticketshop.barcelona/palaudelamusica.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1> Plaça de Catalunya,</h1>
+              <p>
+                This is the best meeting point in the city. It’s right at the bottom of the posh Passeig de Gràcia and at the top of Las Ramblas.<br>
+
+                If you’re waiting for friends in the evening for a meal or getting ready for a shopping expedition by day nowhere in the Ciutat Vella or Eixample will be more than a few minutes on foot from this grand square.<br>
+                
+                Barcelona’s flagship branch of El Corte Inglés is right here, and if you’re new to the city and want to get oriented you could go inside to pick up a map.
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g187497-d208598-Reviews-Plaza_de_Cataluna-Barcelona_Catalonia.html">READ MORE</a></span>
+            </div>
+          </div>
+ 
+
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>

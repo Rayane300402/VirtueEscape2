@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Sign In</title>
+        <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
+        <link rel="stylesheet" href="signin.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="forms">
+                <div class="sign">
+                    <form class="sign-in">
+                        <h2 class="title">Sign In</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <input type="submit" formaction="./pages/2-mainpage.html" value="Sign In" class="button">
+                        <p class="social-text">Or Sign In with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </form>
+                    <form class="sign-up">
+                        <h2 class="title">Sign Up</h2>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password Check">
+                        </div>
+                        <input type="submit" formaction="./pages/2-mainpage.html" value="Sign Up" class="button">
+                        <p class="social-text">Or Sign Up with social platforms</p>
+                        <div class="social-media">
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>  
+            </div>
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>New here?</h3>
+                        <p>
+                            It's a whole new world where you won't have to get out of your bed, the dream of every introvert, and quarantined extrovert. A breathtaking adventure is a click away from you ! From the farthest east to the farthest west, we have it all, and you'll see it all by creating an account (if you haven't already, that is ;) )
+                        </p>
+                        <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+                    </div>
+                </div>
+                <div class="panel right-panel">
+                    <div class="content">
+                        <h3>One of us?</h3>
+                        <p>
+                            Welcome Back! The world is waiting for you to continue your journey, what new things will you do today? What new places will you see  today? Is it in the East or the West? Could it be in the North or the South? Or would you rather do a mix? Come on log in, and let the website do its thing!
+                        </p>
+                        <button class="btn transparent" id="sign-in-btn">Sign In</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

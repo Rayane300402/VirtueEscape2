@@ -1,0 +1,163 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In Antalya</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssantalya.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+   
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+        <div id="slider">
+
+
+          <div class="slide slide1">
+            <div class="slide-content">
+             <h1>Antalya Museum,</h1>
+             <p>
+              The Antalya Museum or Antalya Archeological Museum is one of Turkey's largest museums, <br>
+            located in Konyaaltı, Antalya. It includes 13 exhibition halls and an open air gallery.<br>
+             It covers an area of 7,000 m² and 5000 works of art are exhibited.<br>
+              If you're at all interested in Turkish history,don't miss this excellent museum. <br>
+              The dazzling exhibits here showcase all the best finds from excavation sites across the Turkish coast.<br>
+               Even better, the collection is displayed in exemplary fashion, making Turkey's rich (and rather complicated) history easy to understand. <br>
+               The large archaeological section offers displays from the Bronze Age to Byzantium, with a particular emphasis on ruins in the nearby area.
+
+             </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g297962-d294593-Reviews-Antalya_Muzesi-Antalya_Turkish_Mediterranean_Coast.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+              <h1>Aspendos,</h1>
+              <p>
+                The main reason history buffs visit Antalya is to make the day trip to Aspendos, about 47 kilometers east. <br>
+                This archaeological site is home to a Roman theater commonly thought to be the best preserved in the world and one of the top tourist attractions in Turkey.<br>
+                 The glory days of this dazzling, ancient town were during the 2nd and 3rd centuries, when most of the ruins that can be seen today were built.<br>
+
+                Apart from the theater, which has been fully restored and can seat 15,000 people, much of the rest of the site still lies in ruins and is probably only interesting to the most enthusiastic sightseer. 
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g297963-d548067-Reviews-Aspendos_Ruins_and_Theater-Serik_Serik_District_Turkish_Mediterranean_Coast.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Perge,</h1>
+              <p>
+                Perge's vast and rubble-filled stadium, half-destroyed temples, and huge colonnaded agora are imbued with an atmosphere of past glory. <br>
+                This was once the capital of ancient Pamphylia, which blossomed under first Greek and then Roman rule. <br>
+                The ruins here, about 17 kilometers east of Antalya, are not as well-preserved as others on Turkey's Turquoise Coast, but this also means they attract fewer crowds, <br>
+                leaving visitors able to explore the long colonnaded streets and half-collapsed temples in peace.<br>
+                 The Roman baths, Hellenistic Gate, and Acropolis are all particularly interesting.
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g297962-d548022-Reviews-Perge_Ancient_City-Antalya_Turkish_Mediterranean_Coast.html">READ MORE</a></span>
+
+            </div>
+          </div>
+
+          
+          <div class="slide slide4">
+            <div class="slide-content">
+              <h1> Konyaalti Beach,</h1>
+              <p>
+                East of Antalya's town center,<br>
+                 Konyaalti Beach is one of Antalya's two prime sweeps of sand, with a picturesque backing of mountains rolling down to the coastline beyond.<br>
+                 Sun loungers with umbrellas can be rented, there are good toilet and shower facilities,<br>
+                  and the palm tree lined promenade behind the beach is rimmed with <span class="resto"><a href="https://www.tripadvisor.com/RestaurantsNear-g297962-d296457-Konyaalti_Beach-Antalya_Turkish_Mediterranean_Coast.html">snack shops, cafés, and restaurants</a></span> for when you get peckish.
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g297962-d296457-Reviews-Konyaalti_Beach-Antalya_Turkish_Mediterranean_Coast.html">READ MORE</a></span>  
+            </div>
+          </div>
+
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1> Karst Springs,</h1>
+              <p>
+                The limestone countryside around Antalya is rich in karst springs, sinkholes, and waterfalls.<br>
+                 The lime deposits from these springs have built up over a period of 1.5 to two million years into vast travertine terraces similar to the famed terraces at Pamukkale. <br>
+                 Kirkgöz and Pinarbasi (just to the northwest of Antalya) have springs and sinkholes to see, while at Düdenbasi, a cascade of waterfalls tumbles down a narrow gorge. <br>
+                 There are both upper falls (Düdenbasi Selalesi) and lower falls (Düden Çayi) to admire, and a trip here makes a nice nature break from Antalya's glut of historic attractions.
+              </p>
+              <span class="read"><a href="https://www.hellotravel.com/turkey/karst-springs">READ MORE</a></span>  
+            </div>
+          </div>
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>

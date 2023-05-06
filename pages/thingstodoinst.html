@@ -1,0 +1,167 @@
+<html lang="eng">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial scale=1.0">
+<meta http-equiv= "X-UX-Compatible" content="ie=edge">
+<title>Things To Do In St Petersburg</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100;1,200;1,900&display=swap');
+    </style>
+<link rel="stylesheet" href="cssst.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="2-mainpage.html">virtuescape</a></div>
+  
+  </header>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+
+        <div id="slider">
+          <div class="slide slide1">
+            <div class="slide-content">
+              <h1> State Hermitage Museum,</h1>
+               <p>
+                Founded when Empress Catherine the Great started acquiring works of art in the late 1700s,<br>
+                 the museum didn't officially open to the public until 1852. <br>
+                 Today, the Hermitage is the second-largest art museum in the world after the Louvre,<br>
+                 and it's home to a collection of over three million items. <br>
+                 The museum also holds an impressive collection of Russian art from the 11th to 19th centuries,<br>
+                  a sizable 19th-century Egyptian antiquity collection, and a hall showcasing prehistoric art.<br>
+                   The Hermitage has the largest collection of paintings in the world, spanning many countries and centuries. </p>
+               <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298507-d300071-Reviews-The_State_Hermitage_Museum-St_Petersburg_Northwestern_District.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide2">
+            <div class="slide-content">
+             <h1> Palace Square,</h1>
+             <p>St. Petersburg's main city square is a massive open public space right in front of the Winter Palace.<br>
+                 The Alexander Column, built in the 1830s of a single piece of red granite, stands 47 meters tall at the center of the square.<br>
+                  It was commissioned by Alexander I to commemorate the victory against Napoleon.<br>
+
+                Many major events in Soviet/Russian history have taken place right on the square-Tsar Alexander II was shot here in 1879, <br>
+                and Bolshevik troops started the Revolution here in 1917 by storming the Winter Palace, where the royalty lived.<br>
+                 Since then, the square has also been used for marches and demonstrations, from military parades to celebrate Victory Day to New Year's Eve celebrations. </p>
+             <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298507-d302526-Reviews-Palace_Square-St_Petersburg_Northwestern_District.html">READ MORE</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="slide slide3">
+            <div class="slide-content">
+              <h1>Vasilyevsky Island,</h1>
+              <p>
+                Located just across the river from the city center and the Winter Palace and connected to the mainland by two bridges and a metro line,<br>
+                 this small island is home to a number of landmarks and beautiful parks-including a Museum of Electrical Transport; the Peter the Great Museum of Anthropology and Ethnography;<br>
+                  the Old Saint Petersburg Stock Exchange; and the Baroque Menshikov Palace, which serves as a branch of the Heritage Museum and holds mainly 17th-century Russian art.<br>
+
+                The Russian Academy of Sciences has several branches on the island, as well-and visitors might particularly appreciate visiting the Institute of Russian Literature, <br>
+                which holds original manuscripts of some of Russian's most famous writers, including beloved poet Alexander Pushkin.
+              </p>
+              <span class="read"><a href="https://www.tripadvisor.com/Attractions-g298507-Activities-zfn8828764-St_Petersburg_Northwestern_District.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide4">
+            <div class="slide-content">
+            <h1>Church of the Savior on Spilled Blood,</h1>
+            <p>
+                One of the most beautiful sights in St. Petersburg is this multicolored church designed in traditional medieval Russian style.<br>
+                 Alexander III ordered its construction in 1883 on the site where his father had been assassinated two years prior.<br>
+
+                It took over 20 years for the church to be finally completed, partly because of budget and partly because the materials needed for<br>
+                 its interior décor (which included 7,500 square meters of mosaics to cover the walls and ceilings)
+                weren't that easy to come by.
+                
+                The church was seriously damaged during the Russian Revolution in 1917, then used as a morgue during WWII and as a potato warehouse right after. <br>
+                It took almost 30 years of restoration to get the building to its original splendor-but rather than reopening as a church, the structure is now a museum of mosaics.
+                
+                   
+             </p>
+            <span class="read"><a href="https://www.tripadvisor.com/Attraction_Review-g298507-d300133-Reviews-Church_of_the_Savior_on_Spilled_Blood-St_Petersburg_Northwestern_District.html">READ MORE</a></span>
+            </div>
+          </div>
+
+          <div class="slide slide5">
+            <div class="slide-content">
+              <h1>Rivers and Canals,</h1>
+              <p>
+                If you are interested in sneaking the rich,<br>
+                 diverse and cultural history of Russia under one roof then do plan a visit to this illumination museum located in Sochi.<br>
+                  This museum features an enormous collection of artifacts and other interesting discoveries by local mountaineers.<br>
+                   If you have a love for history and looking to indulge in the past of this serene place <br>
+                   then do head to this interesting museum. 
+              </p>
+              <span class="read"><a href="https://guideforyou-russia.com/10-interesting-facts-about-the-rivers-and-canals-of-st-petersburg/#:~:text=The%20main%20waterway%20of%20the,belonging%20to%20the%20Baltic%20Sea.&text=According%20to%20the%20average%20annual,%2C%20Dunay%2C%20Kama%20and%20Pechora.">READ MORE</a></span>
+            </div>
+          </div>
+ 
+
+
+
+
+        </div>
+        <div id="arrow-right" class="arrow"></div>
+      </div>
+
+
+      <script>
+        let sliderImages = document.querySelectorAll(".slide"),
+        arrowLeft = document.querySelector("#arrow-left"),
+        arrowRight = document.querySelector("#arrow-right"),
+        current = 0;
+      
+      // Clear all images
+      function reset() {
+        for (let i = 0; i < sliderImages.length; i++) {
+          sliderImages[i].style.display = "none";
+        }
+      }
+      
+      // Init slider
+      function startSlide() {
+        reset();
+        sliderImages[0].style.display = "block";
+      }
+      
+      // Show prev
+      function slideLeft() {
+        reset();
+        sliderImages[current - 1].style.display = "block";
+        current--;
+      }
+      
+      // Show next
+      function slideRight() {
+        reset();
+        sliderImages[current + 1].style.display = "block";
+        current++;
+      }
+      
+      // Left arrow click
+      arrowLeft.addEventListener("click", function() {
+        if (current === 0) {
+          current = sliderImages.length;
+        }
+        slideLeft();
+      });
+      
+      // Right arrow click
+      arrowRight.addEventListener("click", function() {
+        if (current === sliderImages.length - 1) {
+          current = -1;
+        }
+        slideRight();
+      });
+      
+      startSlide();
+      
+          
+          </script>
+
+</body>
+</html>
